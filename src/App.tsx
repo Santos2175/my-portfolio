@@ -1,8 +1,12 @@
+import Navbar from './components/Navbar';
+import Hero from './sections/Hero';
+
 function App() {
   return (
-    <>
-      <h1 className='text-blue-500'>Portfolio app</h1>
-    </>
+    <div className='max-w-[1440px] mx-auto'>
+      <Navbar />
+      <Hero />
+    </div>
   );
 }
 
