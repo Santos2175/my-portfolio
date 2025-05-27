@@ -43,4 +43,25 @@
       background-image: var(--gradient-primary);
     }
   }
+
+  .action-btn {
+    @apply h-10 md:h-12 text-xs md:text-[14px] font-medium text-white px-4 lg:px-10 rounded-[71px];
+    background-image: var(--gradient-primary);
+  }
+
+  .action-btn-outline {
+    @apply h-10 md:h-12 text-xs md:text-[14px] font-medium text-primary px-4 lg:px-10 rounded-[71px] border-2 border-primary;
+  }
+
+  .btn-scale-anim {
+    @apply transition-transform duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg;
+  }
+
+  .profile-pic {
+    @apply w-[300px] h-[350px] md:w-[370px] md:h-[428px] bg-orange-100/50 rounded-3xl border-primary object-contain rotate-[2deg] transition-transform duration-300 ease-in-out transform hover:scale-105 hover:rotate-0;
+  }
+
+  .icon-img {
+    @apply absolute w-12 h-12 md:w-16 md:h-16 transition-transform duration-300 ease-in-out hover:scale-110;
+  }
 }
