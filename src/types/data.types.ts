@@ -19,6 +19,7 @@ export interface ISkill {
   skill: string;
   type: 'frontend' | 'backend' | 'tools' | 'language' | 'soft-skills';
   description: string;
+  level: 'Proficient' | 'Comfortable' | 'Familiar' | 'Learning';
 }
 
 export interface ISocialLink {

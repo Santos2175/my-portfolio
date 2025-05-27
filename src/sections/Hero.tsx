@@ -4,12 +4,10 @@ import MONGO_ICON from '../assets/images/mongo-icon.png';
 import EXPRESS_ICON from '../assets/images/express-icon.png';
 import NODE_ICON from '../assets/images/node-icon.png';
 
-type Props = {};
-
-const Hero = (props: Props) => {
+const Hero = () => {
   return (
-    <section id='hero' className='container mx-auto px-8'>
-      <div className='flex flex-col lg:flex-row gap-14 items-center justify-between mt-[60px]'>
+    <section id='hero' className='container mx-auto px-8 '>
+      <div className='flex flex-col lg:flex-row gap-14 items-center justify-between pt-[60px] md:pt-[80px]'>
         <div className='order-2 lg:order-1 text-center lg:text-left mt-16 lg:mt-0'>
           <h3 className='text-xl lg:text-2xl font-medium text-black'>
             Hi, I'm Santosh Gurung

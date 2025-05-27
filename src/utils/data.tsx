@@ -50,8 +50,63 @@ export const SKILLS: ISkill[] = [
     icon: FaReact,
     skill: 'React JS',
     type: 'frontend',
+    level: 'Proficient',
     description:
-      'Experienced in building, component-driven web applications using React.js.',
+      'Proficient in building scalable, component-driven interfaces using React and hooks.',
+  },
+  {
+    id: '02',
+    icon: FaHtml5,
+    skill: 'HTML',
+    type: 'frontend',
+    level: 'Proficient',
+    description:
+      'Strong grasp of semantic HTML for accessibility and SEO-friendly structure.',
+  },
+  {
+    id: '03',
+    icon: FaCss3,
+    skill: 'CSS',
+    type: 'frontend',
+    level: 'Proficient',
+    description:
+      'Skilled in writing responsive and modular CSS with modern layout techniques.',
+  },
+  {
+    id: '04',
+    icon: FaNodeJs,
+    skill: 'Node JS',
+    type: 'backend',
+    level: 'Comfortable',
+    description:
+      'Built RESTful APIs and backend logic using Node.js and Express.',
+  },
+  {
+    id: '05',
+    icon: SiExpress,
+    skill: 'Express JS',
+    type: 'backend',
+    level: 'Comfortable',
+    description:
+      'Experience in building lightweight, scalable APIs with Express.',
+  },
+  {
+    id: '06',
+    icon: SiMongodb,
+    skill: 'MongoDB',
+    type: 'backend',
+    level: 'Comfortable',
+    description:
+      'Worked with MongoDB for document-based data modeling and queries.',
+  },
+  {
+    id: '07',
+    icon: SiMysql,
+    skill: 'MySQL',
+    type: 'backend',
+    level: 'Familiar',
+    description:
+      'Understand basic SQL operations, joins, and relational database schema.',
   },
 ] as const;
 
