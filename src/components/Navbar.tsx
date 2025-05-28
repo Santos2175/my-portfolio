@@ -31,7 +31,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className=' container mx-auto sticky top-5 z-10'>
+    <nav className=' max-w-[1440px] mx-auto sticky top-5 z-10'>
       <div className='flex items-center justify-between rounded-full bg-white/50 border border-[#fee6cc] backdrop-blur-[10px] m-5 p-3 md:p-0'>
         {/* Portfolio app name */}
         <h2 className='text-xl font-medium mr-6 text-secondary'>SANTOSH</h2>

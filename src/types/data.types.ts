@@ -33,6 +33,7 @@ export interface IAboutMe {
   content: string;
   socialLinks: ISocialLink[];
   email: string;
+  phone: string;
 }
 
 export interface IProject {

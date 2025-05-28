@@ -4,7 +4,7 @@ import { ABOUT_ME } from '../utils/data';
 
 const AboutMe = () => {
   return (
-    <section id='about' className='container mx-auto px-8 py-16'>
+    <section id='about' className='max-w-[1440px] mx-auto px-8 py-16'>
       <h4 className='block lg:hidden w-[200px] section-title text-left mb-16'>
         About Me
       </h4>

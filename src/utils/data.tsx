@@ -32,7 +32,7 @@ export const MENU_LINKS: IMenuLink[] = [
   { id: '02', label: 'Skills', offset: -100, to: 'skills' },
   { id: '03', label: 'About', offset: -100, to: 'about' },
   { id: '04', label: 'Projects', offset: -100, to: 'projects' },
-  { id: '05', label: 'Contacts', offset: -100, to: 'contacts' },
+  { id: '05', label: 'Contacts', offset: -100, to: 'contact' },
 ] as const;
 
 // Data for skill tab
@@ -119,6 +119,7 @@ export const ABOUT_ME: IAboutMe = {
     { id: '01', icon: FaLinkedin, label: 'LinkedIn', link: '#' },
   ],
   email: 'santoshgurung2175@gmail.com',
+  phone: '(+977) 9846819969',
 } as const;
 
 // Data for projects
