@@ -25,7 +25,7 @@ const Skills = () => {
     <section id='skills' className=' bg-background mt-26 '>
       <div className='max-w-[1440px] mx-auto  p-10'>
         {/* Title */}
-        <div className='max-w-[1440px] w-full lg:w-[60vw] mx-auto'>
+        <div className=' w-full lg:w-[60vw] mx-auto'>
           <h4 className='section-title'>Technical Proficiency</h4>
 
           <p className='text-sm text-center mt-4 leading-6'>

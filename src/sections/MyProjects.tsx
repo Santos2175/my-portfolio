@@ -3,6 +3,8 @@ import useEmblaCarousel from 'embla-carousel-react';
 import { IoIosArrowForward } from 'react-icons/io';
 import { PROJECTS } from '../utils/data';
 import ProjectCard from '../components/ProjectCard';
+import type { IProject } from '../types/data.types';
+import ProjectModal from '../components/ProjectModal';
 
 const MyProjects = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({
@@ -11,6 +13,8 @@ const MyProjects = () => {
   });
   const [canScrollNext, setCanScrollNext] = useState(false);
   const [canScrollPrev, setCanScrollPrev] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedProject, setSelectedProject] = useState<IProject | null>(null);
 
   const updateScrollButtons = useCallback(() => {
     if (!emblaApi) return;
@@ -23,6 +27,16 @@ const MyProjects = () => {
     emblaApi.on('select', updateScrollButtons);
     updateScrollButtons();
   }, [emblaApi, updateScrollButtons]);
+
+  const handleClickProject = (project: IProject) => {
+    setIsModalOpen(true);
+    setSelectedProject(project);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setSelectedProject(null);
+  };
 
   return (
     <section id='projects' className='bg-background mt-14'>
@@ -47,6 +61,7 @@ const MyProjects = () => {
                     imgUrl={project.image}
                     title={project.title}
                     tags={project.tags}
+                    onClick={() => handleClickProject(project)}
                   />
                 </div>
               ))}
@@ -75,6 +90,10 @@ const MyProjects = () => {
           </button>
         </div>
       </div>
+
+      {isModalOpen && selectedProject && (
+        <ProjectModal project={selectedProject} onClose={closeModal} />
+      )}
     </section>
   );
 };

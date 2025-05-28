@@ -1,8 +1,16 @@
-type Props = { imgUrl: string; title: string; tags: string[] };
+type Props = {
+  imgUrl: string;
+  title: string;
+  tags: string[];
+  onClick: () => void;
+};
 
-const ProjectCard = ({ imgUrl, title, tags }: Props) => {
+const ProjectCard = ({ imgUrl, title, tags, onClick }: Props) => {
   return (
-    <div className='h-full bg-white rounded-xl  overflow-hidden shadow-md mx-3'>
+    <div
+      role='button'
+      onClick={onClick}
+      className='h-full bg-white rounded-xl  overflow-hidden shadow-md mx-3'>
       <img
         src={imgUrl}
         alt={title}

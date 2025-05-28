@@ -6,7 +6,7 @@ import { ABOUT_ME } from '../utils/data';
 const ContactMe = () => {
   return (
     <section id='contact' className='mx-auto max-w-[1440px] p-10'>
-      <div className='w-full lg:w-[60vw] '>
+      <div className='mx-auto w-full lg:w-[60vw] '>
         <h4 className='section-title'>Contact Me</h4>
         <p className='text-sm text-center leading-6 mt-4'>
           A results-driven developer with expertise in cutting-edge tools and
