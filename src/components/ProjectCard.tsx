@@ -1,0 +1,31 @@
+type Props = { imgUrl: string; title: string; tags: string[] };
+
+const ProjectCard = ({ imgUrl, title, tags }: Props) => {
+  return (
+    <div className='h-full bg-white rounded-xl  overflow-hidden shadow-md mx-3'>
+      <img
+        src={imgUrl}
+        alt={title}
+        className='w-full h-72 md:h-80 object-cover'
+      />
+
+      <div className='px-4 py-5'>
+        <h3 className='text-base font-semibold line-clamp-2 overflow-hidden text-ellipsis'>
+          {title}
+        </h3>
+
+        <div className='flex flex-wrap gap-3 mt-3'>
+          {tags.map((tag, index) => (
+            <span
+              key={index}
+              className='text-xs text-secondary bg-orange-100 px-3 py-1 rounded'>
+              {tag}
+            </span>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default ProjectCard;

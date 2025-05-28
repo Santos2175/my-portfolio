@@ -69,4 +69,8 @@
     @apply text-[26px] font-semibold text-center bg-clip-text text-transparent;
     background-image: var(--gradient-primary);
   }
+
+  .arrow-btn {
+    @apply absolute top-1/2 transform -translate-y-1/2 bg-primary text-white p-2 rounded-full shadow cursor-pointer;
+  }
 }
