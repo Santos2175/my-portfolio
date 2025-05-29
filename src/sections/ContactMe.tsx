@@ -1,10 +1,68 @@
 import { IoMdMail } from 'react-icons/io';
+import { motion } from 'framer-motion';
+import { useForm } from 'react-hook-form';
+import { z } from 'zod';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { useState } from 'react';
+import emailjs from '@emailjs/browser';
+import { toast } from 'react-hot-toast';
 import { IoPhonePortraitOutline } from 'react-icons/io5';
 import ContactInfoCard from '../components/ContactInfoCard';
 import { ABOUT_ME } from '../utils/data';
-import { motion } from 'framer-motion';
+
+// Schema for zod validation
+const contactSchema = z.object({
+  fullName: z.string().min(1, 'Full Name is required.'),
+  email: z.string().email(`Invalid email address`),
+  message: z.string().min(1, 'Message is required'),
+});
+
+// Type infering of form data
+type ContactFormData = z.infer<typeof contactSchema>;
+
+// Setup for emailjs Service
+const SERVICE_ID = import.meta.env.VITE_APP_SERVICE_ID;
+const TEMPLATE_ID = import.meta.env.VITE_APP_TEMPLATE_ID;
+const PUBLIC_KEY = import.meta.env.VITE_APP_PUBLIC_KEY;
 
 const ContactMe = () => {
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm<ContactFormData>({
+    resolver: zodResolver(contactSchema),
+    defaultValues: {
+      fullName: '',
+      email: '',
+      message: '',
+    },
+  });
+  const [isLoading, setIsLoading] = useState(false);
+
+  // Handle form submitting
+  const onSubmit = async (data: ContactFormData) => {
+    if (isLoading) return;
+
+    setIsLoading(true);
+    const templateParams = {
+      name: data.fullName,
+      email: data.email,
+      message: data.message,
+    };
+    try {
+      await emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, PUBLIC_KEY);
+      toast.success('Message sent successfully.');
+      reset();
+    } catch (error) {
+      toast.error('Failed to send message. Please try again.');
+      console.error('Failed to send message. Please try again.', error);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   return (
     <section id='contact' className='mx-auto max-w-[1440px] p-10 mt-14'>
       <div className='mx-auto w-full lg:w-[60vw] '>
@@ -34,40 +92,56 @@ const ContactMe = () => {
           />
         </motion.div>
 
+        {/* Contact Form */}
         <div>
           <h5 className='md:hidden text-secondary text-lg font-medium mt-4 mb-4'>
             Contact Form
           </h5>
           {/* Form */}
-          <form className='flex flex-col'>
+          <form className='flex flex-col' onSubmit={handleSubmit(onSubmit)}>
             <input
               type='text'
-              name='fullName'
               placeholder='Full Name'
               id=''
               className='input-box'
               autoComplete='off'
+              {...register('fullName')}
             />
+            {errors && errors.fullName && (
+              <p className='error-message'>{errors.fullName.message}</p>
+            )}
+
             <input
               type='text'
-              name='email'
               placeholder='Email Address'
               id=''
               className='input-box'
               autoComplete='off'
+              {...register('email')}
             />
+            {errors && errors.email && (
+              <p className='error-message'>{errors.email.message}</p>
+            )}
 
             <textarea
-              name='message'
               placeholder='Message'
               id=''
               rows={3}
               className='input-box'
               autoComplete='off'
+              {...register('message')}
             />
+            {errors && errors.message && (
+              <p className='error-message'>{errors.message.message}</p>
+            )}
 
-            <button className='action-btn btn-scale-anim' type='submit'>
-              SUBMIT
+            <button
+              className={`action-btn btn-scale-anim ${
+                isLoading ? 'disabled' : ''
+              }`}
+              type='submit'
+              disabled={isLoading}>
+              {isLoading ? 'SUBMITTING' : 'SUBMIT'}
             </button>
           </form>
         </div>

@@ -34,7 +34,11 @@ const Navbar = () => {
     <nav className=' max-w-[1440px] mx-auto sticky top-5 z-10'>
       <div className='flex items-center justify-between rounded-full bg-white/50 border border-[#fee6cc] backdrop-blur-[10px] m-5 p-3 md:p-0'>
         {/* Portfolio app name */}
-        <h2 className='text-xl font-medium mr-6 text-secondary'>SANTOSH</h2>
+        <Link to='hero' smooth spy offset={-100} className='cursor-pointer'>
+          <h2 className='text-xl font-medium md:ml-6 mr-6 text-secondary'>
+            &lt;SANTOSH/&gt;
+          </h2>
+        </Link>
 
         {/* Hamburgur icon, visible in small devices */}
         <button
@@ -69,11 +73,14 @@ const Navbar = () => {
           {MENU_LINKS.map((item) => (
             <li key={item.id}>
               <Link
-                activeClass='active'
+                activeClass='menu-active'
                 to={item.to}
                 smooth
                 spy
+                hashSpy
+                isDynamic
                 offset={item.offset}
+                duration={500}
                 className='menu-item'>
                 {item.label}
               </Link>

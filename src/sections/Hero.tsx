@@ -4,6 +4,7 @@ import MONGO_ICON from '../assets/images/mongo-icon.png';
 import EXPRESS_ICON from '../assets/images/express-icon.png';
 import NODE_ICON from '../assets/images/node-icon.png';
 import { motion } from 'framer-motion';
+import { Link } from 'react-scroll';
 
 const Hero = () => {
   return (
@@ -16,7 +17,7 @@ const Hero = () => {
           transition={{ duration: 0.5, delay: 0.2 }}
           className='order-2 lg:order-1 text-center lg:text-left mt-16 lg:mt-0'>
           <h3 className='text-xl lg:text-2xl font-medium text-black'>
-            Hi, I'm Santosh Gurung
+            👋 Hi, I'm Santosh Gurung
           </h3>
           <h1
             className='w-full lg:w-[480px] text-4xl lg:text-5xl font-bold leading-[50px]
@@ -30,9 +31,14 @@ const Hero = () => {
           </p>
 
           <div className='flex justify-center lg:justify-start gap-4 md:gap-8 mt-6'>
-            <button className='flex-1 md:flex-none action-btn-outline btn-scale-anim cursor-pointer'>
+            <Link
+              to={'projects'}
+              smooth
+              spy
+              offset={-100}
+              className='flex-1 md:flex-none action-btn-outline btn-scale-anim cursor-pointer'>
               View My Work
-            </button>
+            </Link>
             <button className='flex-1 md:flex-none action-btn btn-scale-anim cursor-pointer'>
               Download Resume
             </button>

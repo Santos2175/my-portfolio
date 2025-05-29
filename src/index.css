@@ -63,6 +63,13 @@
     }
   }
 
+  .menu-active {
+    @apply relative after:content-[''] after:absolute after:h-[3px] after:rounded-full after:-bottom-1 after:left-0 after:w-full cursor-pointer;
+    &::after {
+      background-image: var(--gradient-primary);
+    }
+  }
+
   .action-btn {
     @apply h-10 md:h-12 text-xs md:text-[14px] font-medium text-white px-4 lg:px-10 rounded-[71px]  flex items-center justify-center cursor-pointer;
     background-image: var(--gradient-primary);
@@ -95,5 +102,14 @@
 
   .input-box {
     @apply bg-orange-50 rounded-2xl border border-orange-100 px-4 py-3 placeholder:text-orange-500/80 placeholder:text-sm mb-5 focus:outline-none focus:border-primary;
+  }
+
+  .error-message {
+    @apply text-xs text-red-500 mb-2;
+  }
+
+  .disabled {
+    @apply bg-gray-500 text-slate-200;
+    background-image: none;
   }
 }
