@@ -28,11 +28,16 @@ const Skills = () => {
         <div className=' w-full lg:w-[60vw] mx-auto'>
           <h4 className='section-title'>Technical Proficiency</h4>
 
-          <p className='text-sm text-center mt-4 leading-6'>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 20 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.4, delay: 0.3 }}
+            className='text-sm text-center mt-4 leading-6'>
             A versatile developer with hands-on expertise in modern
             technologies, tools and frameworks, dedicated to building efficient,
             scalable and user centric solutions.
-          </p>
+          </motion.p>
         </div>
 
         <Tabs
@@ -41,8 +46,12 @@ const Skills = () => {
           onChange={handleTabValueChange}
         />
 
-        <div
+        <motion.div
           key={activeTab}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.4, delay: 0.2 }}
           className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 min-h-[350px]'>
           {tabData.map((skill, index) => (
             <motion.div
@@ -58,7 +67,7 @@ const Skills = () => {
               />
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

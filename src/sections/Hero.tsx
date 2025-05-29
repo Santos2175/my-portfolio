@@ -3,24 +3,30 @@ import REACT_ICON from '../assets/images/react.png';
 import MONGO_ICON from '../assets/images/mongo-icon.png';
 import EXPRESS_ICON from '../assets/images/express-icon.png';
 import NODE_ICON from '../assets/images/node-icon.png';
+import { motion } from 'framer-motion';
 
 const Hero = () => {
   return (
     <section id='hero' className='max-w-[1440px] mx-auto px-8 '>
       <div className='flex flex-col lg:flex-row gap-14 items-center justify-between pt-[60px] md:pt-[80px]'>
-        <div className='order-2 lg:order-1 text-center lg:text-left mt-16 lg:mt-0'>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className='order-2 lg:order-1 text-center lg:text-left mt-16 lg:mt-0'>
           <h3 className='text-xl lg:text-2xl font-medium text-black'>
             Hi, I'm Santosh Gurung
           </h3>
           <h1
             className='w-full lg:w-[480px] text-4xl lg:text-5xl font-bold leading-[50px]
           lg:leading-[60px] mt-3 bg-gradient-primary bg-clip-text text-transparent'>
-            Building scalable & User Centric Web Apps
+            Creating scalable apps with solid architecture
           </h1>
 
           <p className='w-full lg:w-[500px] text-sm lg:text-base mt-4'>
-            I am a fullstack developer crafting responsive, accessible and
-            dynamic web experiences using MongoDB, React, Express and Node js
+            As a full-stack developer, I build well-structured, scalable web
+            apps using MongoDB, Express, React, and Node.js.
           </p>
 
           <div className='flex justify-center lg:justify-start gap-4 md:gap-8 mt-6'>
@@ -31,9 +37,9 @@ const Hero = () => {
               Download Resume
             </button>
           </div>
-        </div>
+        </motion.div>
 
-        <div className='w-[300px] md:w-[370px] h-[350px] md:h-[428px] bg-orange-100/50 rounded-3xl relative flex items-center justify-center order-1 lg:order-2 mr-6'>
+        <div className='w-[250px] md:w-[370px] h-[320px] md:h-[428px] bg-orange-100/50 rounded-3xl relative flex items-center justify-center order-1 lg:order-2 md:mr-6'>
           <img src={PROFILE_PIC} alt='' className='profile-pic' />
 
           <img

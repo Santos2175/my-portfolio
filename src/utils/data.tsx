@@ -40,7 +40,8 @@ export const SKILL_TABS: ISkillTab[] = [
   { id: '01', label: 'All', value: 'all' },
   { id: '02', label: 'Frontend', value: 'frontend' },
   { id: '03', label: 'Backend', value: 'backend' },
-  { id: '04', label: 'Tools', value: 'tools' },
+  { id: '04', label: 'Language', value: 'language' },
+  { id: '05', label: 'Tools', value: 'tools' },
 ] as const;
 
 // Data for skills
@@ -112,7 +113,9 @@ export const SKILLS: ISkill[] = [
 
 // Data about me
 export const ABOUT_ME: IAboutMe = {
-  content: 'Full stack developer',
+  content: `My journey into full-stack development began with a simple fascination: how technology makes everyday life easier. I was especially curious about how websites and apps work behind the scenes—how data flows, how systems connect, and how it all comes together to solve real problems. That curiosity grew into a strong interest, and over time, I started building projects that allowed me to explore both the frontend and backend sides of development.
+
+Today, I work with tools like React, Node.js, Express, and MongoDB to create web applications that are not only functional but also user-friendly. I enjoy the process of turning ideas into real, working solutions—whether it’s designing interfaces, building APIs, or managing data. I’m always looking to improve my skills and take on projects that challenge me to grow. I'm open to opportunities where I can contribute to meaningful work and continue learning alongside experienced teams.`,
   socialLinks: [
     { id: '01', icon: FaFacebook, label: 'Facebook', link: '#' },
     { id: '01', icon: FaInstagram, label: 'Instagram', link: '#' },

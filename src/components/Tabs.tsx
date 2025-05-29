@@ -15,8 +15,8 @@ const Tabs = ({ tablist, activeTab, onChange }: Props) => {
   };
 
   return (
-    <div className='flex items-center justify-center my-10'>
-      <div className='bg-[#fff6eb] rounded-full flex'>
+    <div className='flex items-center justify-center my-10 '>
+      <div className='bg-[#fff6eb]  rounded-full flex overflow-x-scroll overflow-y-hidden gap-1 custom-scrollbar md:overflow-x-hidden'>
         {tablist.map((tab) => (
           <motion.button
             key={tab.id}
@@ -26,9 +26,9 @@ const Tabs = ({ tablist, activeTab, onChange }: Props) => {
               scale: activeTab === tab.value ? 1.05 : 1,
             }}
             transition={{ duration: 0.2 }}
-            className={`text-xs md:text-[15px] ${getActiveTabStyles(
+            className={`shrink-0 text-xs md:text-[15px] ${getActiveTabStyles(
               tab.value
-            )} rounded-full px-4 md:px-10 py-6 md:py-3 cursor-pointer`}
+            )} rounded-full p-4 sm:px-6 sm:py-4 md:px-10  md:py-3 cursor-pointer`}
             onClick={() => onChange(tab.value)}>
             {tab.label}
           </motion.button>

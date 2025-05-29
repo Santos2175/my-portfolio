@@ -5,6 +5,7 @@ import { PROJECTS } from '../utils/data';
 import ProjectCard from '../components/ProjectCard';
 import type { IProject } from '../types/data.types';
 import ProjectModal from '../components/ProjectModal';
+import { motion } from 'framer-motion';
 
 const MyProjects = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({
@@ -44,18 +45,27 @@ const MyProjects = () => {
         <div className='w-full lg:w-[60vw] max-w-[1440px] mx-auto'>
           <h4 className='section-title'>Recent Projects</h4>
 
-          <p className='text-sm text-center mt-4 leading-6'>
+          <motion.p
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.4, delay: 0.2 }}
+            className='text-sm text-center mt-4 leading-6'>
             Each project highlights my strength in writing clean code and
             building seamless functionality.
-          </p>
+          </motion.p>
         </div>
 
         <div className='relative'>
           <div className='overflow-hidden' ref={emblaRef}>
             <div className='flex pt-14 pb-8'>
-              {PROJECTS.map((project) => (
-                <div
+              {PROJECTS.map((project, index) => (
+                <motion.div
                   key={project.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.2 }}
+                  transition={{ duration: 0.4, delay: index * 0.2 }}
                   className='min-w-[100%] sm:min-w-[50%] lg:min-w-[33%]'>
                   <ProjectCard
                     imgUrl={project.image}
@@ -63,7 +73,7 @@ const MyProjects = () => {
                     tags={project.tags}
                     onClick={() => handleClickProject(project)}
                   />
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>
