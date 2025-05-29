@@ -10,14 +10,14 @@ const ProjectCard = ({ imgUrl, title, tags, onClick }: Props) => {
     <div
       role='button'
       onClick={onClick}
-      className='h-full bg-white rounded-xl  overflow-hidden shadow-md mx-3'>
+      className='h-full bg-white rounded-xl  overflow-hidden shadow-md mx-3 cursor-pointer'>
       <img
         src={imgUrl}
         alt={title}
         className='w-full h-72 md:h-80 object-cover'
       />
 
-      <div className='px-4 py-5'>
+      <div className='px-4 py-5 border-t border-t-orange-200'>
         <h3 className='text-base font-semibold line-clamp-2 overflow-hidden text-ellipsis'>
           {title}
         </h3>

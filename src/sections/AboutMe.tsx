@@ -35,6 +35,7 @@ const AboutMe = () => {
               <Link
                 to={item.link}
                 key={item.label}
+                target='_blank'
                 className='cursor-pointer group'>
                 <item.icon className='text-2xl text-secondary transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110 group-hover:translate-y-[-2px] group-hover:text-primary' />
               </Link>

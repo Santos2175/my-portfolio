@@ -6,7 +6,9 @@ import {
   FaFacebook,
   FaInstagram,
   FaLinkedin,
+  FaGithub,
 } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';
 
 import { BiLogoJavascript, BiLogoTypescript } from 'react-icons/bi';
 import { SiExpress, SiMongodb, SiMysql, SiWebpack } from 'react-icons/si';
@@ -25,6 +27,8 @@ import type {
   IAboutMe,
   IProject,
 } from '../types/data.types';
+
+import POLLING_APP from '../assets/images/polling-app.png';
 
 // Data for menu links
 export const MENU_LINKS: IMenuLink[] = [
@@ -117,9 +121,36 @@ export const ABOUT_ME: IAboutMe = {
 
 Today, I work with tools like React, Node.js, Express, and MongoDB to create web applications that are not only functional but also user-friendly. I enjoy the process of turning ideas into real, working solutions—whether it’s designing interfaces, building APIs, or managing data. I’m always looking to improve my skills and take on projects that challenge me to grow. I'm open to opportunities where I can contribute to meaningful work and continue learning alongside experienced teams.`,
   socialLinks: [
-    { id: '01', icon: FaFacebook, label: 'Facebook', link: '#' },
-    { id: '01', icon: FaInstagram, label: 'Instagram', link: '#' },
-    { id: '01', icon: FaLinkedin, label: 'LinkedIn', link: '#' },
+    {
+      id: '01',
+      icon: FaFacebook,
+      label: 'Facebook',
+      link: 'https://www.facebook.com/santos.grg.507/',
+    },
+    {
+      id: '02',
+      icon: FaInstagram,
+      label: 'Instagram',
+      link: 'https://www.instagram.com/santos__gurung/',
+    },
+    {
+      id: '03',
+      icon: FaLinkedin,
+      label: 'LinkedIn',
+      link: 'https://www.linkedin.com/in/santosh-gurung2175/',
+    },
+    {
+      id: '04',
+      icon: FaGithub,
+      label: 'GitHub',
+      link: 'https://github.com/Santos2175',
+    },
+    {
+      id: '05',
+      icon: FaXTwitter,
+      label: 'Twitter',
+      link: 'https://x.com/Santosh2175',
+    },
   ],
   email: 'santoshgurung2175@gmail.com',
   phone: '(+977) 9846819969',
@@ -131,7 +162,7 @@ export const PROJECTS: IProject[] = [
     id: 1,
     title:
       'Full Stack polling-app using MERN | MongoDB, Express, React JS, Node JS',
-    image: '',
+    image: POLLING_APP,
     tags: ['React.js', 'Express.js', 'MongoDB', 'Node.js'],
   },
   {

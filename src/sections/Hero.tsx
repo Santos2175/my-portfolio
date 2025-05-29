@@ -8,8 +8,10 @@ import { Link } from 'react-scroll';
 
 const Hero = () => {
   return (
-    <section id='hero' className='max-w-[1440px] mx-auto px-8 '>
-      <div className='flex flex-col lg:flex-row gap-14 items-center justify-between pt-[60px] md:pt-[80px]'>
+    <section
+      id='hero'
+      className='max-w-[1440px] mx-auto px-8 scroll-mt-[100px]'>
+      <div className='flex flex-col lg:flex-row gap-4 lg:gap-14 items-center justify-between pt-[60px] md:pt-[80px]'>
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -46,7 +48,7 @@ const Hero = () => {
         </motion.div>
 
         <div className='w-[250px] md:w-[370px] h-[320px] md:h-[428px] bg-orange-100/50 rounded-3xl relative flex items-center justify-center order-1 lg:order-2 md:mr-6'>
-          <img src={PROFILE_PIC} alt='' className='profile-pic' />
+          <img src={PROFILE_PIC} alt='profile photo' className='profile-pic' />
 
           <img
             src={MONGO_ICON}

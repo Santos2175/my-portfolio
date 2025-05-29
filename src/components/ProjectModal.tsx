@@ -29,11 +29,11 @@ const ProjectModal = ({ project, onClose }: Props) => {
         <img
           src={project.image}
           alt='project image'
-          className='w-full h-60 md:h-72 object-cover'
+          className='w-full h-50 sm:h-72 md:h-80 object-contain'
         />
 
         {/* Title, descriptions and other contents */}
-        <div className='px-4 py-5'>
+        <div className='px-4 py-5 border-t-2 border-t-orange-300 rounded-tl-2xl rounded-tr-2xl'>
           {/* Links to navigate to source code or live app */}
           <div className='flex justify-center gap-4  mb-3'>
             <Link
