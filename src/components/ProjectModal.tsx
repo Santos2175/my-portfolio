@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import type { IProject } from '../types/data.types';
 import { IoIosCloseCircleOutline } from 'react-icons/io';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 type Props = {
   onClose: () => void;
@@ -20,7 +21,11 @@ const ProjectModal = ({ project, onClose }: Props) => {
 
   return (
     <div className='h-screen fixed inset-0 flex items-center justify-center z-50 bg-black/40'>
-      <div className='relative bg-white rounded-xl  shadow-md my-8 w-[90vw] lg:w-[50vw] mx-auto'>
+      <motion.div
+        initial={{ opacity: 0.8, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.3 }}
+        className='relative bg-white rounded-xl  shadow-md my-8 w-[90vw] lg:w-[50vw] mx-auto'>
         <button
           className='absolute bg-orange-100 hover:bg-orange-200/85 flex items-center justify-center -right-2.5 -top-2.5 z-80 p-1 rounded-full cursor-pointer'
           onClick={() => onClose()}>
@@ -67,7 +72,7 @@ const ProjectModal = ({ project, onClose }: Props) => {
             ))}
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };
