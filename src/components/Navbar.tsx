@@ -88,9 +88,14 @@ const Navbar = () => {
           ))}
         </ul>
 
-        <button className='hidden md:block h-12 text-[15px] text-white font-medium bg-gradient-primary rounded-full px-9 transition-transform duration-300 ease-in-out hover:scale-105 cursor-pointer'>
+        <Link
+          to='contact'
+          smooth
+          spy
+          offset={-100}
+          className='hidden md:flex md:items-center md:justify-center h-12 text-[15px] text-white font-medium bg-gradient-primary rounded-full px-9 transition-transform duration-300 ease-in-out hover:scale-105 cursor-pointer'>
           Hire Me
-        </button>
+        </Link>
       </div>
     </nav>
   );
