@@ -12,8 +12,11 @@ import { ABOUT_ME } from '../utils/data';
 
 // Schema for zod validation
 const contactSchema = z.object({
-  fullName: z.string().min(1, 'Full Name is required.'),
-  email: z.string().email(`Invalid email address`),
+  fullName: z.string().min(1, 'Full Name is required'),
+  email: z
+    .string()
+    .min(1, 'Email Address is required')
+    .email(`Invalid email address`),
   message: z.string().min(1, 'Message is required'),
 });
 

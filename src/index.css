@@ -3,6 +3,9 @@
 @import 'tailwindcss';
 
 @theme {
+  /* BREAKPOINST */
+  --breakpoint-xs: 530px;
+
   /* COLORS */
   --color-primary: #f6a64f;
   --color-secondary: #b56151;

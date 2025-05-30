@@ -5,7 +5,7 @@ import { PROJECTS } from '../utils/data';
 import ProjectCard from '../components/ProjectCard';
 import type { IProject } from '../types/data.types';
 import ProjectModal from '../components/ProjectModal';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const MyProjects = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({
@@ -20,7 +20,7 @@ const MyProjects = () => {
   const updateScrollButtons = useCallback(() => {
     if (!emblaApi) return;
     setCanScrollPrev(emblaApi.canScrollPrev());
-    setCanScrollNext(emblaApi.canScrollNext);
+    setCanScrollNext(emblaApi.canScrollNext());
   }, [emblaApi]);
 
   useEffect(() => {
@@ -101,9 +101,11 @@ const MyProjects = () => {
         </div>
       </div>
 
-      {isModalOpen && selectedProject && (
-        <ProjectModal project={selectedProject} onClose={closeModal} />
-      )}
+      <AnimatePresence>
+        {isModalOpen && selectedProject && (
+          <ProjectModal project={selectedProject} onClose={closeModal} />
+        )}
+      </AnimatePresence>
     </section>
   );
 };
