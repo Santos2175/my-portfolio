@@ -48,7 +48,7 @@ const MyProjects = () => {
           <motion.p
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.4, delay: 0.2 }}
             className='text-sm text-center mt-4 leading-6'>
             Each project highlights my strength in writing clean code and

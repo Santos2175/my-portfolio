@@ -70,8 +70,8 @@ const ContactMe = () => {
         <motion.p
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.4, delay: 0.2 }}
           className='text-sm text-center leading-6 mt-4'>
           A results-driven developer with expertise in cutting-edge tools and
           frameworks, dedicated to engineering scalable and effective digital

@@ -24,7 +24,7 @@ const AboutMe = () => {
           <motion.p
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.5, delay: 0.2 }}
             className='text-sm text-justify leading-6 whitespace-pre-line mt-4'>
             {ABOUT_ME.content}
