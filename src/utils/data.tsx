@@ -7,18 +7,28 @@ import {
   FaInstagram,
   FaLinkedin,
   FaGithub,
+  FaGitAlt,
+  FaSass,
 } from 'react-icons/fa';
-import { FaXTwitter } from 'react-icons/fa6';
+import { FaXTwitter, FaDocker } from 'react-icons/fa6';
 
-import { BiLogoJavascript, BiLogoTypescript } from 'react-icons/bi';
-import { SiExpress, SiMongodb, SiMysql, SiWebpack } from 'react-icons/si';
 import {
-  VscVscode,
-  VscCommentUnresolved,
-  VscTerminalPowershell,
-} from 'react-icons/vsc';
-import { FaGitAlt, FaDribbble } from 'react-icons/fa6';
-import { MdGroups3 } from 'react-icons/md';
+  BiLogoJavascript,
+  BiLogoTypescript,
+  BiLogoPython,
+  BiLogoRedux,
+} from 'react-icons/bi';
+import { TbSql } from 'react-icons/tb';
+import {
+  SiExpress,
+  SiMongodb,
+  SiMysql,
+  SiWebpack,
+  SiReactquery,
+  SiPostman,
+  SiTailwindcss,
+} from 'react-icons/si';
+import { VscVscode } from 'react-icons/vsc';
 
 import type {
   IMenuLink,
@@ -57,7 +67,7 @@ export const SKILLS: ISkill[] = [
     type: 'frontend',
     level: 'Proficient',
     description:
-      'Proficient in building scalable, component-driven interfaces using React and hooks.',
+      'Proficient in building scalable, component-driven UIs using React, hooks, and context for dynamic single-page applications.',
   },
   {
     id: '02',
@@ -66,7 +76,7 @@ export const SKILLS: ISkill[] = [
     type: 'frontend',
     level: 'Proficient',
     description:
-      'Strong grasp of semantic HTML for accessibility and SEO-friendly structure.',
+      'Strong grasp of semantic HTML to structure accessible and SEO-optimized web pages.',
   },
   {
     id: '03',
@@ -75,7 +85,7 @@ export const SKILLS: ISkill[] = [
     type: 'frontend',
     level: 'Proficient',
     description:
-      'Skilled in writing responsive and modular CSS with modern layout techniques.',
+      'Skilled in crafting responsive, adaptive designs using Flexbox, Grid, and modular CSS techniques.',
   },
   {
     id: '04',
@@ -84,7 +94,7 @@ export const SKILLS: ISkill[] = [
     type: 'backend',
     level: 'Comfortable',
     description:
-      'Built RESTful APIs and backend logic using Node.js and Express.',
+      'Developed backend logic and RESTful services using Node.js, handling asynchronous operations and middleware.',
   },
   {
     id: '05',
@@ -93,7 +103,7 @@ export const SKILLS: ISkill[] = [
     type: 'backend',
     level: 'Comfortable',
     description:
-      'Experience in building lightweight, scalable APIs with Express.',
+      'Hands-on experience on building scalable API endpoints with Express, using middleware and routing patterns effectively.',
   },
   {
     id: '06',
@@ -102,16 +112,142 @@ export const SKILLS: ISkill[] = [
     type: 'backend',
     level: 'Comfortable',
     description:
-      'Worked with MongoDB for document-based data modeling and queries.',
+      'Hands-on experience with MongoDB for schema design, CRUD operations, and aggregation pipelines in NoSQL environments.',
   },
   {
     id: '07',
     icon: SiMysql,
     skill: 'MySQL',
     type: 'backend',
+    level: 'Comfortable',
+    description:
+      'Good understanding of relational schema, joins, indexing, and SQL queries to manage structured data.',
+  },
+  {
+    id: '08',
+    icon: TbSql,
+    skill: 'SQL',
+    type: 'language',
+    level: 'Comfortable',
+    description:
+      'Capable of writing optimized SQL queries for data retrieval, manipulation, and relational joins across tables.',
+  },
+  {
+    id: '09',
+    icon: VscVscode,
+    skill: 'VsCode',
+    type: 'tools',
+    level: 'Comfortable',
+    description:
+      'Efficient with VSCode extensions, snippets, and debugging tools to speed up development and reduce context-switching.',
+  },
+  {
+    id: '10',
+    icon: SiWebpack,
+    skill: 'Webpack',
+    type: 'frontend',
     level: 'Familiar',
     description:
-      'Understand basic SQL operations, joins, and relational database schema.',
+      'Basic understanding of module bundling, asset optimization, and configuration for custom React setups.',
+  },
+  {
+    id: '11',
+    icon: SiPostman,
+    skill: 'Postman',
+    type: 'tools',
+    level: 'Comfortable',
+    description:
+      'Regularly use Postman to test, debug, and document REST APIs with collection and environment setup.',
+  },
+  {
+    id: '12',
+    icon: SiReactquery,
+    skill: 'React Query',
+    type: 'frontend',
+    level: 'Comfortable',
+    description:
+      'Used React Query to handle server state with caching, background refetching, and automated data synchronization.',
+  },
+  {
+    id: '13',
+    icon: SiTailwindcss,
+    skill: 'TailwindCSS',
+    type: 'frontend',
+    level: 'Comfortable',
+    description:
+      'Built responsive UIs using utility-first classes with Tailwind, improving design consistency and development speed.',
+  },
+  {
+    id: '14',
+    icon: FaSass,
+    skill: 'SASS',
+    type: 'frontend',
+    level: 'Comfortable',
+    description:
+      'Experienced in writing modular SCSS using variables, mixins, nesting, and partials to maintain clean and scalable codebases.',
+  },
+  {
+    id: '15',
+    icon: FaGitAlt,
+    skill: 'Git',
+    type: 'tools',
+    level: 'Comfortable',
+    description:
+      'Use Git for version control, branching workflows, and collaboration through pull requests and conflict resolution.',
+  },
+  {
+    id: '16',
+    icon: FaDocker,
+    skill: 'Docker',
+    type: 'tools',
+    level: 'Comfortable',
+    description:
+      'Basic knowledge of containerization to package and run applications in isolated environments using Dockerfiles and volumes.',
+  },
+  {
+    id: '17',
+    icon: FaGithub,
+    skill: 'Gihhub',
+    type: 'tools',
+    level: 'Comfortable',
+    description:
+      'Use GitHub for source code management, issue tracking, and project collaboration via repositories and actions.',
+  },
+  {
+    id: '18',
+    icon: BiLogoJavascript,
+    skill: 'Javascript',
+    type: 'language',
+    level: 'Proficient',
+    description:
+      'Proficient in writing clean, modular JavaScript with ES6+ features, async handling, and DOM manipulation.',
+  },
+  {
+    id: '19',
+    icon: BiLogoTypescript,
+    skill: 'Typescript',
+    type: 'language',
+    level: 'Proficient',
+    description:
+      'Skilled in using TypeScript for scalable codebases, leveraging types, interfaces, and generics for reliability.',
+  },
+  {
+    id: '20',
+    icon: BiLogoPython,
+    skill: 'Python',
+    type: 'language',
+    level: 'Comfortable',
+    description:
+      'Comfortable scripting in Python for automation, data parsing, and logic-building with libraries like requests and pandas.',
+  },
+  {
+    id: '21',
+    icon: BiLogoRedux,
+    skill: 'Redux',
+    type: 'frontend',
+    level: 'Comfortable',
+    description:
+      'Comfortable with Redux Toolkit using createSlice, createAsyncThunk, and best practices for managing complex state.',
   },
 ] as const;
 
