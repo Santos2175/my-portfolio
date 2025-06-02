@@ -41,7 +41,7 @@ export interface IProject {
   title: string;
   image: string;
   tags: string[];
-  codeLink?: string;
-  liveLink?: string;
+  codeLink: string;
+  liveLink: string;
   description?: string;
 }

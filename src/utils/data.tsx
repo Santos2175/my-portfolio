@@ -39,6 +39,12 @@ import type {
 } from '../types/data.types';
 
 import POLLING_APP from '../assets/images/polling-app.png';
+import DEV_COMMUNITY from '../assets/images/devSocialApp.png';
+import CHAT_APP from '../assets/images/chatApp.png';
+import ADMIN_DASHBOARD from '../assets/images/adminDashboard.png';
+import GYM_APP from '../assets/images/evogym.png';
+import WEATHER_APP from '../assets/images/weather-app.png';
+import EXPENSE_TRACKER from '../assets/images/expense-tracker.png';
 
 // Data for menu links
 export const MENU_LINKS: IMenuLink[] = [
@@ -296,37 +302,91 @@ Today, I work with tools like React, Node.js, Express, and MongoDB to create web
 export const PROJECTS: IProject[] = [
   {
     id: 1,
-    title:
-      'Full Stack polling-app using MERN | MongoDB, Express, React JS, Node JS',
+    title: 'BuzzPoll - Fullstack polling app (MERN)',
+    description:
+      'Create and vote on polls in real-time with authentication, results, and user analytics. Built with the MERN stack for seamless interaction.',
     image: POLLING_APP,
     tags: ['React.js', 'Express.js', 'MongoDB', 'Node.js'],
+    codeLink: 'https://github.com/Santos2175/polling-app',
+    liveLink: 'https://polling-app-self.vercel.app/',
   },
   {
     id: 2,
-    title:
-      'Full Stack polling-app using MERN | MongoDB, Express, React JS, Node JS',
-    image: '',
+    title: 'Expense Tracker - Fullstack Finance App (MERN)',
+    description:
+      'Track your income and expenses visually with charts and summaries. User authentication and persistent storage using MongoDB.',
+    image: EXPENSE_TRACKER,
     tags: ['React.js', 'Express.js', 'MongoDB', 'Node.js'],
+    codeLink: 'https://github.com/Santos2175/expense-tracker',
+    liveLink: 'https://expense-tracker-nu-bice.vercel.app/',
   },
   {
     id: 3,
-    title:
-      'Full Stack polling-app using MERN | MongoDB, Express, React JS, Node JS',
-    image: '',
-    tags: ['React.js', 'Express.js', 'MongoDB', 'Node.js'],
+    title: 'Klimate - Weather dashboard (React Frontend)',
+    description:
+      'A sleek dashboard showing current weather and forecasts using OpenWeather API. Built with TypeScript, React, and modern UI components.',
+    image: WEATHER_APP,
+    tags: [
+      'Typescript',
+      'React.js',
+      'React Query',
+      'Axios',
+      'Shadcn',
+      'Openweather Api',
+    ],
+    codeLink: 'https://github.com/Santos2175/weather-app',
+    liveLink: 'https://weather-app-sepia-pi-93.vercel.app/',
   },
   {
     id: 4,
-    title:
-      'Full Stack polling-app using MERN | MongoDB, Express, React JS, Node JS',
-    image: '',
-    tags: ['React.js', 'Express.js', 'MongoDB', 'Node.js'],
+    title: 'EvoGym - Gym app (React Frontend)',
+    description:
+      'Responsive gym website with membership plans, class schedules, and animations. Built with React and styled using Tailwind CSS.',
+    image: GYM_APP,
+    tags: [
+      'Typescript',
+      'React.js',
+      'Tailwindcss',
+      'React hook form',
+      'framer-motion',
+    ],
+    codeLink: 'https://github.com/Santos2175/gym-app',
+    liveLink: 'https://gym-app-orcin-nine.vercel.app/',
   },
   {
     id: 5,
-    title:
-      'Full Stack polling-app using MERN | MongoDB, Express, React JS, Node JS',
-    image: '',
+    title: 'DevCommunity - Fullstack social app (MERN)',
+    description:
+      'Connect with developers, share posts, and comment your opinions on their posts. Full-featured social platform using MERN stack with authentication and feeds.',
+    image: DEV_COMMUNITY,
     tags: ['React.js', 'Express.js', 'MongoDB', 'Node.js'],
+    codeLink: 'https://github.com/Santos2175/Dev-Social-App',
+    liveLink: 'https://dev-social-app.onrender.com/',
+  },
+  {
+    id: 6,
+    title: 'Connectify - Fullstack chat app (MERN)',
+    description:
+      'Real-time chat application with WebSocket (Socket.io) integration. Supports user auth, and message persistence with MongoDB',
+    image: CHAT_APP,
+    tags: ['React.js', 'Express.js', 'MongoDB', 'Node.js', 'socket.io'],
+    codeLink: 'https://github.com/Santos2175/Chat-App',
+    liveLink: 'https://chat-app-qo06.onrender.com/',
+  },
+  {
+    id: 7,
+    title: 'Admin Dashboard - (React Frontend)',
+    description:
+      'Interactive dashboard with charts, analytics, and UI animations. Built using React, Tailwind, Framer Motion, and Recharts.',
+    image: ADMIN_DASHBOARD,
+    tags: [
+      'React.js',
+      'Tailwindcss',
+      'Recharts',
+      'lucide-react',
+      'framer-motion',
+    ],
+    codeLink: 'https://github.com/Santos2175/Admin-Dashboard',
+    liveLink: 'https://admin-dashboard-topaz-seven-38.vercel.app/',
   },
 ] as const;

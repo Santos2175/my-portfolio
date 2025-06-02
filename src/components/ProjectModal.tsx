@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
 import type { IProject } from '../types/data.types';
 import { IoIosCloseCircleOutline } from 'react-icons/io';
-import { Link } from 'react-router-dom';
 import { easeInOut, motion } from 'framer-motion';
 
 type Props = {
@@ -45,23 +44,27 @@ const ProjectModal = ({ project, onClose }: Props) => {
         <img
           src={project.image}
           alt='project image'
-          className='w-full h-50 sm:h-72 md:h-80 object-contain'
+          className='w-full h-50 sm:h-72 md:h-80 object-fill'
         />
 
         {/* Title, descriptions and other contents */}
         <div className='px-4 py-5 border-t-2 border-t-orange-300 rounded-tl-2xl rounded-tr-2xl'>
           {/* Links to navigate to source code or live app */}
           <div className='flex justify-center gap-4  mb-3'>
-            <Link
-              to={'#'}
+            <a
+              href={project.codeLink}
+              target='_blank'
+              rel='noopener noreferrer'
               className='flex-1  action-btn-outline hover:shadow-md cursor-pointer h-8 md:h-10'>
               View Code
-            </Link>
-            <Link
-              to={'#'}
+            </a>
+            <a
+              href={project.liveLink}
+              target='_blank'
+              rel='noopener noreferrer'
               className='flex-1 action-btn h-8 md:h-10 hover:shadow-lg'>
               View Live
-            </Link>
+            </a>
           </div>
 
           {/* Project Title */}
@@ -70,7 +73,7 @@ const ProjectModal = ({ project, onClose }: Props) => {
           </h3>
 
           {/* Project Description */}
-          <p className='text-sm text-left my-3'>This is the description</p>
+          <p className='text-sm text-left my-3'>{project.description}</p>
 
           {/* Project Tags */}
           <div className='flex flex-wrap gap-3'>
