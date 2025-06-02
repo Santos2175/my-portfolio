@@ -68,7 +68,7 @@ const ContactMe = () => {
 
   return (
     <section id='contact' className='mx-auto max-w-[1440px] p-10 mt-14'>
-      <div className='mx-auto w-full lg:w-[60vw] '>
+      <div className='mx-auto w-full lg:w-[60%] '>
         <h4 className='section-title'>Contact Me</h4>
         <motion.p
           initial={{ opacity: 0, y: 50 }}

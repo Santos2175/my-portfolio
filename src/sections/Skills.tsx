@@ -80,16 +80,16 @@ const Skills = () => {
 
   return (
     <section id='skills' className='bg-background mt-26'>
-      <div className='max-w-[1440px] mx-auto p-10'>
+      <div className='mx-auto max-w-[1440px] p-10'>
         {/* Title */}
-        <div className='w-full lg:w-[60vw] mx-auto'>
+        <div className='w-full lg:w-[60%]  mx-auto '>
           <h4 className='section-title'>Technical Proficiency</h4>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 20 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.4, delay: 0.3 }}
-            className='text-sm text-center mt-4 leading-6'>
+            className='text-sm text-center mt-4 leading-6 '>
             A versatile developer with hands-on expertise in modern
             technologies, tools and frameworks, dedicated to building efficient,
             scalable and user centric solutions.

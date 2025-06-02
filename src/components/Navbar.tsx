@@ -31,8 +31,8 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className=' max-w-[1440px] mx-auto sticky top-5 z-10'>
-      <div className='flex items-center justify-between rounded-full bg-white/50 border border-[#FDCF91] backdrop-blur-[10px] m-5 p-3 md:p-0'>
+    <nav className='max-w-[1440px] mx-auto sticky top-5 z-10'>
+      <div className='flex items-center justify-between rounded-full bg-white/50 border border-[#FDCF91] backdrop-blur-[10px] m-5 lg:mx-12 p-3 md:p-0'>
         {/* Portfolio app name */}
         <Link to='hero' smooth spy offset={-100} className='cursor-pointer'>
           <h2 className='text-lg md:text-xl font-medium md:ml-6 mr-6 text-secondary'>
