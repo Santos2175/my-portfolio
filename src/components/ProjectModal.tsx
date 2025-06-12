@@ -26,7 +26,7 @@ const ProjectModal = ({ project, onClose }: Props) => {
   });
 
   return (
-    <div className='h-screen fixed inset-0 flex items-center justify-center z-50 bg-black/40'>
+    <div className='h-screen fixed inset-0 flex items-center justify-center z-50 bg-black/40 '>
       <motion.div
         initial={{ opacity: 0.8, y: 50, scale: 0.9 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -35,7 +35,7 @@ const ProjectModal = ({ project, onClose }: Props) => {
           duration: 0.3,
           ease: easeInOut,
         }}
-        className='relative bg-white rounded-xl  shadow-md my-8 w-[90vw] lg:w-[50vw] mx-auto'>
+        className='relative bg-white rounded-xl  shadow-md my-8 w-[90vw] lg:w-[50vw] mx-auto '>
         <button
           className='absolute bg-orange-100 hover:bg-orange-200/85 flex items-center justify-center -right-2.5 -top-2.5 z-80 p-1 rounded-full cursor-pointer'
           onClick={onClose}>
@@ -44,11 +44,11 @@ const ProjectModal = ({ project, onClose }: Props) => {
         <img
           src={project.image}
           alt='project image'
-          className='w-full h-50 sm:h-72 md:h-80 object-fill'
+          className='w-full h-50 sm:h-72 md:h-80 object-fill rounded-xl'
         />
 
         {/* Title, descriptions and other contents */}
-        <div className='px-4 py-5 border-t-2 border-t-orange-300 rounded-tl-2xl rounded-tr-2xl'>
+        <div className='px-4 py-5 md:px-5 md:pb-7 border-t-2 border-t-orange-300 rounded-tl-2xl rounded-tr-2xl'>
           {/* Links to navigate to source code or live app */}
           <div className='flex justify-center gap-4  mb-3'>
             <a
@@ -73,7 +73,9 @@ const ProjectModal = ({ project, onClose }: Props) => {
           </h3>
 
           {/* Project Description */}
-          <p className='text-sm text-left my-3'>{project.description}</p>
+          <p className='text-sm text-left my-3 md:my-4'>
+            {project.description}
+          </p>
 
           {/* Project Tags */}
           <div className='flex flex-wrap gap-3'>

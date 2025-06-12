@@ -45,6 +45,8 @@ import ADMIN_DASHBOARD from '../assets/images/adminDashboard.png';
 import GYM_APP from '../assets/images/evogym.png';
 import WEATHER_APP from '../assets/images/weather-app.png';
 import EXPENSE_TRACKER from '../assets/images/expense-tracker.png';
+import AUTH_APP from '../assets/images/auth-app.png';
+import MULTI_STEPPER_FORM from '../assets/images/multi-stepper-form.png';
 
 // Data for menu links
 export const MENU_LINKS: IMenuLink[] = [
@@ -339,6 +341,40 @@ export const PROJECTS: IProject[] = [
   },
   {
     id: 4,
+    title: 'Auth App - Full Stack (MERN)',
+    description:
+      'An authentication app with features such as verify email, forgot password, reset password along with security tokens',
+    image: AUTH_APP,
+    tags: [
+      'Typescript',
+      'React.js',
+      'Axios',
+      'Zustand',
+      'Node.js',
+      'Express.js',
+      'MongoDB',
+    ],
+    codeLink: 'https://github.com/Santos2175/auth-app',
+    liveLink: 'https://auth-app-two-ebon.vercel.app/',
+  },
+  {
+    id: 5,
+    title: 'Multi Stepper Form - React.js',
+    description:
+      'A multi step form built for guiding the clients through mulitple steps for project planning setup.',
+    image: MULTI_STEPPER_FORM,
+    tags: [
+      'Typescript',
+      'React.js',
+      'React Hook Form',
+      'shadcn',
+      'Tailwindcss',
+    ],
+    codeLink: 'https://github.com/Santos2175/multi-stepper-form',
+    liveLink: 'https://multi-stepper-form-three.vercel.app/',
+  },
+  {
+    id: 6,
     title: 'EvoGym - Gym app (React Frontend)',
     description:
       'Responsive gym website with membership plans, class schedules, and animations. Built with React and styled using Tailwind CSS.',
@@ -352,26 +388,6 @@ export const PROJECTS: IProject[] = [
     ],
     codeLink: 'https://github.com/Santos2175/gym-app',
     liveLink: 'https://gym-app-orcin-nine.vercel.app/',
-  },
-  {
-    id: 5,
-    title: 'DevCommunity - Fullstack social app (MERN)',
-    description:
-      'Connect with developers, share posts, and comment your opinions on their posts. Full-featured social platform using MERN stack with authentication and feeds.',
-    image: DEV_COMMUNITY,
-    tags: ['React.js', 'Express.js', 'MongoDB', 'Node.js'],
-    codeLink: 'https://github.com/Santos2175/Dev-Social-App',
-    liveLink: 'https://dev-social-app.onrender.com/',
-  },
-  {
-    id: 6,
-    title: 'Connectify - Fullstack chat app (MERN)',
-    description:
-      'Real-time chat application with WebSocket (Socket.io) integration. Supports user auth, and message persistence with MongoDB',
-    image: CHAT_APP,
-    tags: ['React.js', 'Express.js', 'MongoDB', 'Node.js', 'socket.io'],
-    codeLink: 'https://github.com/Santos2175/Chat-App',
-    liveLink: 'https://chat-app-qo06.onrender.com/',
   },
   {
     id: 7,
@@ -388,5 +404,25 @@ export const PROJECTS: IProject[] = [
     ],
     codeLink: 'https://github.com/Santos2175/Admin-Dashboard',
     liveLink: 'https://admin-dashboard-topaz-seven-38.vercel.app/',
+  },
+  {
+    id: 8,
+    title: 'DevCommunity - Fullstack social app (MERN)',
+    description:
+      'Connect with developers, share posts, and comment your opinions on their posts. Full-featured social platform using MERN stack with authentication and feeds.',
+    image: DEV_COMMUNITY,
+    tags: ['React.js', 'Express.js', 'MongoDB', 'Node.js'],
+    codeLink: 'https://github.com/Santos2175/Dev-Social-App',
+    liveLink: 'https://dev-social-app.onrender.com/',
+  },
+  {
+    id: 9,
+    title: 'Connectify - Fullstack chat app (MERN)',
+    description:
+      'Real-time chat application with WebSocket (Socket.io) integration. Supports user auth, and message persistence with MongoDB',
+    image: CHAT_APP,
+    tags: ['React.js', 'Express.js', 'MongoDB', 'Node.js', 'socket.io'],
+    codeLink: 'https://github.com/Santos2175/Chat-App',
+    liveLink: 'https://chat-app-qo06.onrender.com/',
   },
 ] as const;
