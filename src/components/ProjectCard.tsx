@@ -3,19 +3,23 @@ type Props = {
   title: string;
   tags: string[];
   onClick: () => void;
+  onImageLoad: () => void;
 };
 
-const ProjectCard = ({ imgUrl, title, tags, onClick }: Props) => {
+const ProjectCard = ({ imgUrl, title, tags, onClick, onImageLoad }: Props) => {
   return (
     <div
       role='button'
       onClick={onClick}
       className='h-full bg-white rounded-xl  overflow-hidden shadow-md mx-3 cursor-pointer'>
-      <img
-        src={imgUrl}
-        alt={title}
-        className='w-full h-72 md:h-80 object-cover'
-      />
+      <div className='relative w-full h-72 md:h-80'>
+        <img
+          src={imgUrl}
+          alt={title}
+          onLoad={onImageLoad}
+          className='w-full h-72 md:h-80 object-cover top-0 left-0 absolute'
+        />
+      </div>
 
       <div className='px-4 py-5 border-t border-t-orange-200'>
         <h3 className='text-base font-semibold line-clamp-2 overflow-hidden text-ellipsis'>

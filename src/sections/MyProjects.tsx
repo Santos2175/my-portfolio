@@ -5,7 +5,7 @@ import { PROJECTS } from '../utils/data';
 import ProjectCard from '../components/ProjectCard';
 import type { IProject } from '../types/data.types';
 import ProjectModal from '../components/ProjectModal';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, easeIn } from 'framer-motion';
 
 const MyProjects = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({
@@ -16,6 +16,7 @@ const MyProjects = () => {
   const [canScrollPrev, setCanScrollPrev] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedProject, setSelectedProject] = useState<IProject | null>(null);
+  const [loaded, setLoaded] = useState<boolean>(false);
 
   const updateScrollButtons = useCallback(() => {
     if (!emblaApi) return;
@@ -62,16 +63,24 @@ const MyProjects = () => {
               {PROJECTS.map((project, index) => (
                 <motion.div
                   key={project.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, amount: 0.2 }}
-                  transition={{ duration: 0.4, delay: index * 0.2 }}
-                  className='min-w-[100%] sm:min-w-[50%] lg:min-w-[33%]'>
+                  initial={{ opacity: 0, x: 30 }}
+                  animate={loaded ? { opacity: 1, x: 0 } : {}}
+                  transition={{
+                    duration: 0.4,
+                    delay: index * 0.02,
+                    ease: easeIn,
+                  }}
+                  className='min-w-[100%] sm:min-w-[50%] lg:min-w-[33%]'
+                  style={{
+                    willChange: 'transform',
+                    backfaceVisibility: 'hidden',
+                  }}>
                   <ProjectCard
                     imgUrl={project.image}
                     title={project.title}
                     tags={project.tags}
                     onClick={() => handleClickProject(project)}
+                    onImageLoad={() => setLoaded(true)}
                   />
                 </motion.div>
               ))}
