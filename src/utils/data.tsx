@@ -48,6 +48,10 @@ import EXPENSE_TRACKER from '../assets/images/expense-tracker.png';
 import AUTH_APP from '../assets/images/auth-app.png';
 import MULTI_STEPPER_FORM from '../assets/images/multi-stepper-form.png';
 
+// CV link
+export const CV_LINK =
+  'https://drive.google.com/file/d/1DEO3C_mtxJnRwpTxJTZri83WASZe2Svx/view?usp=sharing';
+
 // Data for menu links
 export const MENU_LINKS: IMenuLink[] = [
   { id: '01', label: 'Home', offset: -100, to: 'hero' },

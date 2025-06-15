@@ -5,6 +5,7 @@ import EXPRESS_ICON from '../assets/images/express-icon.png';
 import NODE_ICON from '../assets/images/node-icon.png';
 import { motion } from 'framer-motion';
 import { Link } from 'react-scroll';
+import { CV_LINK } from '../utils/data';
 
 const Hero = () => {
   return (
@@ -41,9 +42,13 @@ const Hero = () => {
               className='flex-1 md:flex-none action-btn-outline btn-scale-anim cursor-pointer'>
               View My Work
             </Link>
-            <button className='flex-1 md:flex-none action-btn btn-scale-anim cursor-pointer'>
+            <a
+              href={CV_LINK}
+              target='_blank'
+              className='flex-1 md:flex-none action-btn btn-scale-anim cursor-pointer'>
+              {' '}
               Download Resume
-            </button>
+            </a>
           </div>
         </motion.div>
 
