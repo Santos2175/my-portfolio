@@ -12,13 +12,42 @@ type Props = {
 
 const Tabs = ({ tablist, activeTab, onChange }: Props) => {
   const [emblaRef, emblaApi] = useEmblaCarousel({
-    dragFree: true,
+    dragFree: false,
     containScroll: 'trimSnaps',
     align: 'start',
+    loop: false,
   });
 
   const [canScrollNext, setCanScrollNext] = useState(false);
   const [canScrollPrev, setCanScrollPrev] = useState(false);
+
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsSmallScreen(window.innerWidth < 530);
+    };
+    checkScreenSize();
+    window.addEventListener('resize', checkScreenSize);
+    return () => window.removeEventListener('resize', checkScreenSize);
+  }, []);
+
+  useEffect(() => {
+    if (!emblaApi || !isSmallScreen) return;
+    const onScroll = () => {
+      const selectedIndex = emblaApi.selectedScrollSnap();
+      const selectedTab = tablist[selectedIndex];
+      if (selectedTab && selectedTab.value !== activeTab) {
+        onChange(selectedTab.value);
+      }
+    };
+
+    emblaApi.on('select', onScroll);
+
+    return () => {
+      emblaApi.off('select', onScroll);
+    };
+  }, [emblaApi, tablist, activeTab, onChange, isSmallScreen]);
 
   // Update embla scroll button
   const updateScrollButtons = useCallback(() => {
@@ -57,7 +86,7 @@ const Tabs = ({ tablist, activeTab, onChange }: Props) => {
       <div
         ref={emblaRef}
         className='bg-orange-100/85 rounded-full w-full md:w-auto overflow-hidden mx-4 md:mx-0'>
-        <div className='flex justify-between md:gap-2 px-2 py-1'>
+        <div className='flex justify-between md:gap-2 px-2 py-1 '>
           {tablist.map((tab) => (
             <motion.button
               key={tab.id}
