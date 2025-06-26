@@ -16,7 +16,7 @@ const Hero = () => {
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
+          viewport={{ once: false, amount: 0.2 }}
           transition={{ duration: 0.5, delay: 0.2 }}
           className='order-2 lg:order-1 text-center lg:text-left mt-16 lg:mt-0 lg:pl-10 xl:pl-16'>
           <h3 className='text-xl lg:text-2xl font-medium text-black'>

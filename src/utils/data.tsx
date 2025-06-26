@@ -28,6 +28,7 @@ import {
   SiPostman,
   SiTailwindcss,
 } from 'react-icons/si';
+import { RiNextjsLine } from 'react-icons/ri';
 import { VscVscode } from 'react-icons/vsc';
 
 import type {
@@ -47,10 +48,11 @@ import WEATHER_APP from '../assets/images/weather-app.png';
 import EXPENSE_TRACKER from '../assets/images/expense-tracker.png';
 import AUTH_APP from '../assets/images/auth-app.png';
 import MULTI_STEPPER_FORM from '../assets/images/multi-stepper-form.png';
+import TRAVEL_APP from '../assets/images/travel-app.png';
 
 // CV link
 export const CV_LINK =
-  'https://drive.google.com/file/d/1DEO3C_mtxJnRwpTxJTZri83WASZe2Svx/view?usp=sharing';
+  'https://drive.google.com/file/d/1FqzsnIdOfyh_T0oZWiLFzl7iVag1LDmm/view?usp=sharing';
 
 // Data for menu links
 export const MENU_LINKS: IMenuLink[] = [
@@ -261,6 +263,15 @@ export const SKILLS: ISkill[] = [
     description:
       'Comfortable with Redux Toolkit using createSlice, createAsyncThunk, and best practices for managing complex state.',
   },
+  {
+    id: '22',
+    icon: RiNextjsLine,
+    skill: 'Next JS',
+    type: 'frontend',
+    level: 'Comfortable',
+    description:
+      'Comfortable using Next.js for building performant full-stack apps with features like routing, SSR, API integration.',
+  },
 ] as const;
 
 // Data about me
@@ -312,7 +323,15 @@ export const PROJECTS: IProject[] = [
     description:
       'Create and vote on polls in real-time with authentication, results, and user analytics. Built with the MERN stack for seamless interaction.',
     image: POLLING_APP,
-    tags: ['React.js', 'Express.js', 'MongoDB', 'Node.js'],
+    tags: [
+      'React.js',
+      'Express.js',
+      'MongoDB',
+      'Node.js',
+      'Cloudinary',
+      'Axios',
+      'Jsonwebtoken',
+    ],
     codeLink: 'https://github.com/Santos2175/polling-app',
     liveLink: 'https://polling-app-self.vercel.app/',
   },
@@ -322,7 +341,16 @@ export const PROJECTS: IProject[] = [
     description:
       'Track your income and expenses visually with charts and summaries. User authentication and persistent storage using MongoDB.',
     image: EXPENSE_TRACKER,
-    tags: ['React.js', 'Express.js', 'MongoDB', 'Node.js'],
+    tags: [
+      'React.js',
+      'Express.js',
+      'MongoDB',
+      'Node.js',
+      'Cloudinary',
+      'Axios',
+      'Jsonwebtoken',
+      'Recharts',
+    ],
     codeLink: 'https://github.com/Santos2175/expense-tracker',
     liveLink: 'https://expense-tracker-nu-bice.vercel.app/',
   },
@@ -395,6 +423,23 @@ export const PROJECTS: IProject[] = [
   },
   {
     id: 7,
+    title: 'WanderNest - Travel app (Next.js)',
+    description:
+      'Responsive travel app landing page with animations. Built with Next.js and styled using Tailwind CSS.',
+    image: TRAVEL_APP,
+    tags: [
+      'Typescript',
+      'Next.js',
+      'Tailwindcss',
+      'AOS(Animate On Scroll)',
+      'Carousel',
+      'Swiper',
+    ],
+    codeLink: 'https://github.com/Santos2175/travel-app-nextjs',
+    liveLink: 'https://travel-app-nextjs-one.vercel.app/',
+  },
+  {
+    id: 8,
     title: 'Admin Dashboard - (React Frontend)',
     description:
       'Interactive dashboard with charts, analytics, and UI animations. Built using React, Tailwind, Framer Motion, and Recharts.',
@@ -410,7 +455,7 @@ export const PROJECTS: IProject[] = [
     liveLink: 'https://admin-dashboard-topaz-seven-38.vercel.app/',
   },
   {
-    id: 8,
+    id: 9,
     title: 'DevCommunity - Fullstack social app (MERN)',
     description:
       'Connect with developers, share posts, and comment your opinions on their posts. Full-featured social platform using MERN stack with authentication and feeds.',
@@ -420,7 +465,7 @@ export const PROJECTS: IProject[] = [
     liveLink: 'https://dev-social-app.onrender.com/',
   },
   {
-    id: 9,
+    id: 10,
     title: 'Connectify - Fullstack chat app (MERN)',
     description:
       'Real-time chat application with WebSocket (Socket.io) integration. Supports user auth, and message persistence with MongoDB',

@@ -73,7 +73,7 @@ const ContactMe = () => {
         <motion.p
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: false, amount: 0.3 }}
           transition={{ duration: 0.4, delay: 0.2 }}
           className='text-sm text-center leading-6 mt-4'>
           A results-driven developer with expertise in cutting-edge tools and
@@ -86,7 +86,7 @@ const ContactMe = () => {
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
+          viewport={{ once: false, amount: 0.2 }}
           transition={{ duration: 0.4, delay: 0.2 }}>
           <ContactInfoCard icon={IoMdMail} text={ABOUT_ME.email} />
           <ContactInfoCard
