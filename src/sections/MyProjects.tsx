@@ -108,6 +108,14 @@ const MyProjects = () => {
             <IoIosArrowForward />
           </button>
         </div>
+
+        <div className='pl-4'>
+          <p className=' text-xs md:text-sm '>
+            <strong>Note: </strong>Some of the fullstack projects might take
+            time to load backend services due to cold starts as they are hosted
+            on free tiers (Render).
+          </p>
+        </div>
       </div>
 
       <AnimatePresence>
