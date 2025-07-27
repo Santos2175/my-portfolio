@@ -27,6 +27,8 @@ import {
   SiReactquery,
   SiPostman,
   SiTailwindcss,
+  SiNestjs,
+  SiPostgresql,
 } from 'react-icons/si';
 import { RiNextjsLine } from 'react-icons/ri';
 import { VscVscode } from 'react-icons/vsc';
@@ -49,10 +51,11 @@ import EXPENSE_TRACKER from '../assets/images/expense-tracker.png';
 import AUTH_APP from '../assets/images/auth-app.png';
 import MULTI_STEPPER_FORM from '../assets/images/multi-stepper-form.png';
 import TRAVEL_APP from '../assets/images/travel-app.png';
+import MEDIMEET_APP from '../assets/images/medimeet.png';
 
 // CV link
 export const CV_LINK =
-  'https://drive.google.com/file/d/1FqzsnIdOfyh_T0oZWiLFzl7iVag1LDmm/view?usp=sharing';
+  'https://drive.google.com/file/d/1jZCbi9UqeU2f4Tx5Jh7SFcfeT3rlv36a/view?usp=sharing';
 
 // Data for menu links
 export const MENU_LINKS: IMenuLink[] = [
@@ -272,6 +275,24 @@ export const SKILLS: ISkill[] = [
     description:
       'Comfortable using Next.js for building performant full-stack apps with features like routing, SSR, API integration.',
   },
+  {
+    id: '23',
+    icon: SiNestjs,
+    skill: 'Nest JS',
+    type: 'backend',
+    level: 'Comfortable',
+    description:
+      'Comfortable using Nest.js for building efficient and scalable server-side applications, leveraging its modular features and decorators.',
+  },
+  {
+    id: '24',
+    icon: SiPostgresql,
+    skill: 'PostgreSQL',
+    type: 'backend',
+    level: 'Comfortable',
+    description:
+      'Comfortable using PostgreSQL for relational database management, including schema design, queries, and optimization.',
+  },
 ] as const;
 
 // Data about me
@@ -319,6 +340,24 @@ Today, I work with tools like React, Node.js, Express, and MongoDB to create web
 export const PROJECTS: IProject[] = [
   {
     id: 1,
+    title: 'MediMeet- Fullstack telemedicine app (Next.js)',
+    description:
+      'A telemedicine application that connects patients with healthcare professionals for virtual consultations. Built with Next.js for a seamless user experience.',
+    image: MEDIMEET_APP,
+    tags: [
+      'Next.js',
+      'Typescript',
+      'Clerk',
+      'Vonage',
+      'Prisma',
+      'Postgres',
+      'shadcn',
+    ],
+    codeLink: 'https://github.com/Santos2175/doctors-appointment-app',
+    liveLink: 'https://doctors-appointment-app-nu.vercel.app/',
+  },
+  {
+    id: 2,
     title: 'BuzzPoll - Fullstack polling app (MERN)',
     description:
       'Create and vote on polls in real-time with authentication, results, and user analytics. Built with the MERN stack for seamless interaction.',
@@ -336,7 +375,7 @@ export const PROJECTS: IProject[] = [
     liveLink: 'https://polling-app-self.vercel.app/',
   },
   {
-    id: 2,
+    id: 3,
     title: 'Expense Tracker - Fullstack Finance App (MERN)',
     description:
       'Track your income and expenses visually with charts and summaries. User authentication and persistent storage using MongoDB.',
@@ -355,7 +394,7 @@ export const PROJECTS: IProject[] = [
     liveLink: 'https://expense-tracker-nu-bice.vercel.app/',
   },
   {
-    id: 3,
+    id: 4,
     title: 'Klimate - Weather dashboard (React Frontend)',
     description:
       'A sleek dashboard showing current weather and forecasts using OpenWeather API. Built with TypeScript, React, and modern UI components.',
@@ -372,7 +411,7 @@ export const PROJECTS: IProject[] = [
     liveLink: 'https://weather-app-sepia-pi-93.vercel.app/',
   },
   {
-    id: 4,
+    id: 5,
     title: 'Auth App - Full Stack (MERN)',
     description:
       'An authentication app with features such as verify email, forgot password, reset password along with security tokens',
@@ -390,7 +429,7 @@ export const PROJECTS: IProject[] = [
     liveLink: 'https://auth-app-two-ebon.vercel.app/',
   },
   {
-    id: 5,
+    id: 6,
     title: 'Multi Stepper Form - React.js',
     description:
       'A multi step form built for guiding the clients through mulitple steps for project planning setup.',
@@ -406,7 +445,7 @@ export const PROJECTS: IProject[] = [
     liveLink: 'https://multi-stepper-form-three.vercel.app/',
   },
   {
-    id: 6,
+    id: 7,
     title: 'EvoGym - Gym app (React Frontend)',
     description:
       'Responsive gym website with membership plans, class schedules, and animations. Built with React and styled using Tailwind CSS.',
@@ -422,7 +461,7 @@ export const PROJECTS: IProject[] = [
     liveLink: 'https://gym-app-orcin-nine.vercel.app/',
   },
   {
-    id: 7,
+    id: 8,
     title: 'WanderNest - Travel app (Next.js)',
     description:
       'Responsive travel app landing page with animations. Built with Next.js and styled using Tailwind CSS.',
@@ -439,7 +478,7 @@ export const PROJECTS: IProject[] = [
     liveLink: 'https://travel-app-nextjs-one.vercel.app/',
   },
   {
-    id: 8,
+    id: 9,
     title: 'Admin Dashboard - (React Frontend)',
     description:
       'Interactive dashboard with charts, analytics, and UI animations. Built using React, Tailwind, Framer Motion, and Recharts.',
@@ -455,7 +494,7 @@ export const PROJECTS: IProject[] = [
     liveLink: 'https://admin-dashboard-topaz-seven-38.vercel.app/',
   },
   {
-    id: 9,
+    id: 10,
     title: 'DevCommunity - Fullstack social app (MERN)',
     description:
       'Connect with developers, share posts, and comment your opinions on their posts. Full-featured social platform using MERN stack with authentication and feeds.',
@@ -465,7 +504,7 @@ export const PROJECTS: IProject[] = [
     liveLink: 'https://dev-social-app.onrender.com/',
   },
   {
-    id: 10,
+    id: 11,
     title: 'Connectify - Fullstack chat app (MERN)',
     description:
       'Real-time chat application with WebSocket (Socket.io) integration. Supports user auth, and message persistence with MongoDB',
